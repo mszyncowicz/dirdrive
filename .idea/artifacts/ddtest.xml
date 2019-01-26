@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ddtest">
+    <output-path>$PROJECT_DIR$/out/artifacts/ddtest</output-path>
+    <root id="root">
+      <element id="module-output" name="dirdrive-server" />
+      <element id="dir-copy" path="$PROJECT_DIR$/dirdrive-server/src/main/resources/META-INF" />
+      <element id="dir-copy" path="$PROJECT_DIR$/dirdrive-server/src/main/webapp/WEB-INF" />
+    </root>
+  </artifact>
+</component>
