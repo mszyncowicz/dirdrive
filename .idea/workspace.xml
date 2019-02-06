@@ -7,27 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc538ad-d66b-434d-9564-ba0817f80351" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/JsoupDownloadIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/SessionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/SessionRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/DirectoryRepositoryIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/SessionFactoryRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/SessionRepositoryIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-model/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dirdrive-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DefaultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/RSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/RSApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/SessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/ApiKeyDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/DirectoryDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/DirectoryListDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/FileDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/FileListResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/FileRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/GeneralResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/dto/SessionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/model/ApiKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/model/Directory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/model/Session.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/service/ApiKeyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/service/ApiKeyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/SessionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/SessionRepositoryImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/SessionControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/SessionControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/repository/DirectoryRepositoryIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/repository/SessionFactoryRule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/repository/SessionRepositoryIT.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dirdrive-api/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,59 +49,123 @@
     <session id="847543525">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="35" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="35" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="89" />
+          <entry key="java" value="214" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="89" />
+          <entry key="JAVA" value="214" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/dirdrive-model/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="-289">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dirdrive-api/src/main/java/org/fytyny/dirdrive/api/dto/DirectoryDTO.java">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/JsoupDownloadIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="289">
+              <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/service/DirectoryServiceIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/service/SessionServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/JsoupDownloadIT.java">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="470">
+              <caret line="296" column="55" selection-start-line="296" selection-start-column="55" selection-end-line="296" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="188" selection-start-line="188" selection-end-line="189" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/service/ApiKeyServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-66">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/DirectoryRepositoryIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -103,31 +173,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dirdrive-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4420">
-              <caret line="299" column="114" selection-start-line="299" selection-start-column="114" selection-end-line="299" selection-end-column="114" />
+            <state relative-caret-position="2213">
+              <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="151" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>junit</find>
+      <find>moc</find>
+      <find>mock</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/dirdrive-server" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java" />
         <option value="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/JsoupDownloadIT.java" />
+        <option value="$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/SessionRepositoryIT.java" />
+        <option value="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/SessionRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/dirdrive-server/pom.xml" />
+        <option value="$PROJECT_DIR$/dirdrive-model/pom.xml" />
+        <option value="$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java" />
       </list>
     </option>
   </component>
@@ -145,7 +219,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1164" />
+    <option name="x" value="738" />
+    <option name="y" value="117" />
     <option name="width" value="763" />
     <option name="height" value="1087" />
   </component>
@@ -155,6 +230,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,12 +239,89 @@
               <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
               <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dirdrive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dirdrive" type="462c0819:PsiDirectoryNode" />
+              <item name="dirdrive-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -175,16 +329,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="M:/Android" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548524878534" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549483837891" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dirdrive-server/src/main/webapp/WEB-INF" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.fytyny.dirdrive" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\OneDrive\IdeaProjects\dirdrive\dirdrive-model\src\test\java\org\fytyny\dirdrive" />
+      <recent name="I:\OneDrive\IdeaProjects\dirdrive\dirdrive-model\src\main\java\org\fytyny\dirdrive" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="I:\OneDrive\IdeaProjects\dirdrive" />
     </key>
@@ -201,7 +362,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JsoupDownloadIT.test">
+  <component name="RunManager" selected="JUnit.DirectoryControllerTest.shouldGetSingleFile">
     <configuration name="Wildfly" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 10.1.0.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/DD/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -355,6 +516,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DirectoryControllerTest.shouldGetSingleFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dirdrive-server" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fytyny.dirdrive.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fytyny.dirdrive.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fytyny.dirdrive.controller.DirectoryControllerTest" />
+      <option name="METHOD_NAME" value="shouldGetSingleFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JsoupDownloadIT.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dirdrive-server" />
       <shortenClasspath name="MANIFEST" />
@@ -368,6 +547,30 @@
       <option name="MAIN_CLASS_NAME" value="org.fytyny.dirdrive.JsoupDownloadIT" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SessionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dirdrive-server" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fytyny.dirdrive.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fytyny.dirdrive.service" />
+      <option name="MAIN_CLASS_NAME" value="org.fytyny.dirdrive.service.SessionServiceTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <shortenClasspath name="MANIFEST" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -424,11 +627,16 @@
       <item itemvalue="JBoss Server.Wildfly" />
       <item itemvalue="JUnit.JsoupDownloadIT.test" />
       <item itemvalue="JUnit.DirectoryControllerTest" />
+      <item itemvalue="JUnit.SessionServiceTest" />
+      <item itemvalue="JUnit." />
+      <item itemvalue="JUnit.DirectoryControllerTest.shouldGetSingleFile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JsoupDownloadIT.test" />
+        <item itemvalue="JUnit.DirectoryControllerTest.shouldGetSingleFile" />
         <item itemvalue="JUnit.DirectoryControllerTest" />
+        <item itemvalue="JUnit.SessionServiceTest" />
+        <item itemvalue="JUnit.JsoupDownloadIT.test" />
       </list>
     </recent_temporary>
   </component>
@@ -442,23 +650,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548517756927</updated>
-      <workItem from="1548517759455" duration="4952000" />
+      <workItem from="1548517759455" duration="5549000" />
+      <workItem from="1548528652218" duration="18000" />
+      <workItem from="1548531178264" duration="1272000" />
+      <workItem from="1548536176583" duration="38000" />
+      <workItem from="1548593888093" duration="45000" />
+      <workItem from="1549480173125" duration="3512000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JsoupDownloadIT_test - 2019.01.26 at 17h 22m 54s.xml">
-      <configuration name="JsoupDownloadIT.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DirectoryControllerTest - 2019.01.26 at 17h 37m 19s.xml">
-      <configuration name="DirectoryControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DirectoryControllerTest - 2019.01.26 at 17h 38m 39s.xml">
-      <configuration name="DirectoryControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DirectoryControllerTest - 2019.01.26 at 17h 41m 20s.xml">
-      <configuration name="DirectoryControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JsoupDownloadIT_test - 2019.01.26 at 17h 44m 24s.xml">
       <configuration name="JsoupDownloadIT.test" configurationId="JUnit" />
     </history-entry>
@@ -468,47 +669,68 @@
     <history-entry file="JsoupDownloadIT_test - 2019.01.26 at 17h 49m 08s.xml">
       <configuration name="JsoupDownloadIT.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SessionServiceTest - 2019.02.06 at 20h 32m 08s.xml">
+      <configuration name="SessionServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest - 2019.02.06 at 20h 32m 41s.xml">
+      <configuration name="DirectoryControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest_shouldGetSingleFile - 2019.02.06 at 20h 48m 02s.xml">
+      <configuration name="DirectoryControllerTest.shouldGetSingleFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest_shouldGetSingleFile - 2019.02.06 at 20h 58m 27s.xml">
+      <configuration name="DirectoryControllerTest.shouldGetSingleFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest_shouldGetSingleFile - 2019.02.06 at 21h 04m 55s.xml">
+      <configuration name="DirectoryControllerTest.shouldGetSingleFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest_shouldGetSingleFile - 2019.02.06 at 21h 05m 03s.xml">
+      <configuration name="DirectoryControllerTest.shouldGetSingleFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DirectoryControllerTest_shouldGetSingleFile - 2019.02.06 at 21h 09m 28s.xml">
+      <configuration name="DirectoryControllerTest.shouldGetSingleFile" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4952000" />
+    <option name="totallyTimeSpent" value="10434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Web" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17144433" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17640573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32988626" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32678387" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32988626" />
-      <window_info anchor="bottom" id="Java Enterprise" weight="0.32988626" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32988626" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3319545" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3319545" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="CDI" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32988626" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49944875" weight="0.10548087" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50275636" side_tool="true" weight="0.32988626" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49724367" weight="0.32988626" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32988626" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32988626" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,14 +739,75 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/dirdrive-server" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java</url>
+          <line>172</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java</url>
+          <line>183</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>new File(new File(&quot;&quot;).getAbsolutePath()).getParentFile().getAbsolutePath()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(new File(&quot;&quot;).getAbsolutePath()).getParentFile()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(new File(&quot;&quot;).getAbsolutePath()).getAbsolutePath()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(&quot;&quot;).getAbsolutePath()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(&quot;&quot;).getParent()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(&quot;&quot;).getParentFile()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new File(&quot;&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dirdrive-api/src/main/java/org/fytyny/dirdrive/api/dto/DirectoryDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -532,24 +815,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dirdrive-server/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dirdrive-api/src/main/java/org/fytyny/dirdrive/api/dto/FileDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4420">
-          <caret line="299" column="114" selection-start-line="299" selection-start-column="114" selection-end-line="299" selection-end-column="114" />
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/SessionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/SessionFactoryRule.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/SessionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/DirectoryRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/main/java/org/fytyny/dirdrive/repository/SessionRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/SessionRepositoryIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/service/ApiKeyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/service/ApiKeyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2213">
+          <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="151" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/DirectoryRepositoryIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/JsoupDownloadIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/main/java/org/fytyny/dirdrive/controller/DirectoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="188" selection-start-line="188" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-model/src/test/java/org/fytyny/dirdrive/repository/ApiKeyRepositoryIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/service/DirectoryServiceIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/service/SessionServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirdrive-server/src/test/java/org/fytyny/dirdrive/controller/DirectoryControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="296" column="55" selection-start-line="296" selection-start-column="55" selection-end-line="296" selection-end-column="55" />
         </state>
       </provider>
     </entry>
