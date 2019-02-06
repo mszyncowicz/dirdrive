@@ -71,7 +71,7 @@ public class DirectoryControllerTest {
 
         Directory realDirectory = new Directory();
         realDirectory.setLabel("main");
-        realDirectory.setPath(new File("").getAbsolutePath());
+        realDirectory.setPath(new File(new File("").getAbsolutePath()).getParentFile().getAbsolutePath());
 
         apiKey.setDirectoryList(Arrays.asList(realDirectory));
 
@@ -294,7 +294,7 @@ public class DirectoryControllerTest {
             return null;
         }).when(responseService).success(any());
 
-        FileDTO fileDTO = new FileDTO(".gitignore","28-12-2018 00:15:27");
+        FileDTO fileDTO = new FileDTO(".gitignore","26-01-2019 19:27:42");
         when(directoryService.getSingleFile(any(),any(),any())).thenAnswer(a->{
             Directory argumentAt = a.getArgumentAt(1, Directory.class);
             return Optional.of(new File(argumentAt.getPath() + File.separator + a.getArgumentAt(0,String.class)));
