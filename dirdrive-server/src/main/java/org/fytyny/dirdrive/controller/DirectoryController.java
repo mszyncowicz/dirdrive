@@ -136,7 +136,7 @@ public class DirectoryController {
 
     FileListResponseDTO fromFileList(List<File> files){
         FileListResponseDTO fileListResponseDTO = new FileListResponseDTO();
-        List<FileDTO> fileDTOS = new LinkedList<>();
+        Set<FileDTO> fileDTOS = new HashSet<>();
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         for (File f : files){
             Instant temporal = Instant.ofEpochMilli(f.lastModified());
@@ -144,7 +144,7 @@ public class DirectoryController {
             String format = dateTimeFormatter.format(localDateTime);
             fileDTOS.add(new FileDTO(f.getName(),format));
         }
-        fileListResponseDTO.setFileDTOList(fileDTOS);
+        fileListResponseDTO.setFileDTOSet(fileDTOS);
         return fileListResponseDTO;
     }
 

@@ -204,7 +204,7 @@ public class DirectoryControllerTest {
         doAnswer(a->{
             Assert.assertTrue(a.getArguments()[0] instanceof FileListResponseDTO);
             FileListResponseDTO fileListResponseDTO = (FileListResponseDTO) a.getArguments()[0];
-            List<FileDTO> fileDTOList = fileListResponseDTO.getFileDTOList();
+            Set<FileDTO> fileDTOList = fileListResponseDTO.getFileDTOSet();
             Pattern pattern = Pattern.compile("[0-3][0-9]-[0-1][0-9]-[0-9]{4} [0-2][0-9]:[0-5][0-9]:[0-5][0-9]");
             fileDTOList.forEach(e->{
                 Assert.assertNotNull(e.getModifyDate());
