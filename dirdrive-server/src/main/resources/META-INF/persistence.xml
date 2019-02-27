@@ -7,6 +7,9 @@
     <persistence-unit name="base">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>jboss/datasources/DirDriveDS</jta-data-source>
+        <class>org.fytyny.dirdrive.model.ApiKey</class>
+        <class>org.fytyny.dirdrive.model.Session</class>
+        <class>org.fytyny.dirdrive.model.Directory</class>
         <properties>
             <property name="hibernate.archive.autodetection" value="class" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
