@@ -6,6 +6,7 @@ import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import java.util.List;
 import java.util.UUID;
 
 @Model
@@ -35,7 +36,7 @@ public class SessionRepositoryImpl implements SessionRepository{
     public Session getByToken(String token) {
         Query query = entityManager.createQuery("SELECT s from Session s where s.token = :param");
         query.setParameter("param",token);
-        Object singleResult = query.getSingleResult();
-        return (Session) singleResult;
+        List resultList = query.getResultList();
+        return resultList.isEmpty() ? null : (Session)resultList.get(0);
     }
 }
