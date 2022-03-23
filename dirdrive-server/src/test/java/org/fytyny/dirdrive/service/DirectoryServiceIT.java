@@ -9,19 +9,20 @@ import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.mockito.Matchers.anyObject;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import static org.mockito.ArgumentMatchers.any;
+
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class DirectoryServiceIT {
 
     @Mock
@@ -32,7 +33,7 @@ public class DirectoryServiceIT {
 
     DirectoryServiceImpl directoryService;
 
-    @Before
+    @BeforeEach
     public void init(){
         directoryService = new DirectoryServiceImpl();
         directoryService.apiKeyService = apiKeyService;
@@ -48,10 +49,10 @@ public class DirectoryServiceIT {
 
         when(apiKeyService.getApiKeyBySession("session2")).thenReturn(secondApiKey);
 
-        when(apiKeyService.existByToken(anyObject())).thenReturn(true);
-        when(apiKeyService.containsDirectory(anyObject(),anyObject())).thenAnswer(a->{
-            Directory directory = a.getArgumentAt(1,Directory.class);
-            ApiKey apiKey1 = a.getArgumentAt(0,ApiKey.class);
+        when(apiKeyService.existByToken(any())).thenReturn(true);
+        when(apiKeyService.containsDirectory(any(),any())).thenAnswer(a->{
+            Directory directory = a.getArgument(1,Directory.class);
+            ApiKey apiKey1 = a.getArgument(0,ApiKey.class);
             return apiKeyService.existByToken(apiKey.getToken()) && apiKey1.getDirectoryList().stream().map(d -> d.getPath()).collect(Collectors.toList()).contains(directory.getPath());
         });
 
@@ -68,9 +69,9 @@ public class DirectoryServiceIT {
         session2.setApiKey(apiKey2);
         session2.setToken("session2");
         int size = apiKey2.getDirectoryList().size();
-        Assert.assertFalse(directoryService.addDirectoryToApiKey(dir,session));
-        Assert.assertTrue(directoryService.addDirectoryToApiKey(dir,session2));
-        Assert.assertTrue(apiKey2.getDirectoryList().size() > size);
+        Assertions.assertFalse(directoryService.addDirectoryToApiKey(dir,session));
+        Assertions.assertTrue(directoryService.addDirectoryToApiKey(dir,session2));
+        Assertions.assertTrue(apiKey2.getDirectoryList().size() > size);
 
         verify(apiKeyService).save(apiKey2);
     }
@@ -83,14 +84,18 @@ public class DirectoryServiceIT {
         session1.setDirectoryList(Arrays.asList(directory));
         Session session = createSession("session1", session1);
         List<File> filesOfDir = directoryService.getFilesOfDir(directory, session);
-        Assert.assertNotNull(filesOfDir);
+        Assertions.assertNotNull(filesOfDir);
         List<String> namesOfDir = filesOfDir.stream().map(f -> f.getName()).collect(Collectors.toList());
-        Assert.assertFalse(namesOfDir.isEmpty());
-        Assert.assertTrue(namesOfDir.contains("Eminem - Venom-8CdcCD5V-d8.mp3"));
+        Assertions.assertFalse(namesOfDir.isEmpty());
+        Assertions.assertTrue(namesOfDir.contains("Eminem - Venom-8CdcCD5V-d8.mp3"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void shouldNotGetDirIfDirNoInApiKeyDirList(){
+        Assertions.assertThrows(IllegalArgumentException.class, () ->apiKeyWithoutDirGetDir());
+    }
+
+    private void apiKeyWithoutDirGetDir() {
         Directory directory = new Directory();
         directory.setPath("E:\\Muzyka\\Yt-Music");
         ApiKey session1 = apiKeyService.getApiKeyBySession("session1");
@@ -105,7 +110,7 @@ public class DirectoryServiceIT {
         ApiKey session1 = apiKeyService.getApiKeyBySession("session1");
         session1.setDirectoryList(Arrays.asList(directory));
         Session session = createSession("session1", session1);
-        Assert.assertTrue(directoryService.getSingleFile("Eminem - Venom-8CdcCD5V-d8.mp3",directory,session).isPresent());
+        Assertions.assertTrue(directoryService.getSingleFile("Eminem - Venom-8CdcCD5V-d8.mp3",directory,session).isPresent());
     }
     private Session createSession(String token, ApiKey apiKey){
         Session session = new Session();

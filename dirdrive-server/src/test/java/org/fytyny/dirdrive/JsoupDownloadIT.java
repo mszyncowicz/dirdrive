@@ -6,8 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.fytyny.dirdrive.api.dto.*;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
@@ -48,7 +49,7 @@ public class JsoupDownloadIT {
         fileRequest.setFileDTO(fileDTO);
         downloadFile(token,fileRequest);
         File file = new File(fileDTO.getName());
-        Assert.assertTrue(file.exists());
+        Assertions.assertTrue(file.exists());
     }
 
     private boolean downloadFile(String sesionToken, FileRequest request) throws IOException {

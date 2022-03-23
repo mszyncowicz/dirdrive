@@ -4,15 +4,17 @@ import org.fytyny.dirdrive.model.Directory;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.junit.rules.MethodRule;
-import org.junit.runners.model.FrameworkMethod;
-import org.junit.runners.model.Statement;
+import org.junit.jupiter.api.extension.*;
 
-public class SessionFactoryRule implements MethodRule {
+import java.lang.reflect.Field;
+import java.util.Arrays;
+
+public class SessionFactoryExtension implements Extension, BeforeEachCallback, AfterEachCallback,BeforeAllCallback {
     private SessionFactory sessionFactory;
     private Transaction transaction;
     private org.hibernate.Session session;
-
+/*
+    @Override
     public Statement apply(final Statement statement, FrameworkMethod method,
                            Object test) {
         return new Statement() {
@@ -29,6 +31,47 @@ public class SessionFactoryRule implements MethodRule {
             }
         };
     }
+
+
+ */
+
+    @Override
+    public void beforeAll(ExtensionContext extensionContext) throws Exception {
+    }
+
+    private void injectEntityManagers(Object object) {
+        Class<?> aClass = object.getClass();
+        Arrays.stream(aClass.getDeclaredFields()).filter(lvField -> lvField.getAnnotationsByType(InjectEntityMangaer.class).length > 0)
+                .forEach(lvField -> {
+                    try {
+                        injectInterface(object, lvField);
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                });
+    }
+
+    private void injectInterface(Object object, Field lvField) throws IllegalAccessException {
+        if (lvField.getAnnotationsByType(InjectEntityMangaer.class).length > 0) {
+            lvField.setAccessible(true);
+            Repository lvRepository = (Repository) lvField.get(object);
+            injectManager(lvRepository);
+        }
+    }
+
+    @Override
+    public void beforeEach(ExtensionContext extensionContext) throws Exception {
+        sessionFactory = createSessionFactory();
+        extensionContext.getTestInstance().ifPresent(this::injectEntityManagers);
+        createSession();
+        beginTransaction();
+    }
+
+    @Override
+    public void afterEach(ExtensionContext extensionContext) throws Exception {
+      //  shutdown();
+    }
+
     private void shutdown() {
         try {
             try {
@@ -48,8 +91,9 @@ public class SessionFactoryRule implements MethodRule {
     }
     private SessionFactory createSessionFactory() {
         Configuration configuration = new Configuration();
-        configuration.addAnnotatedClass(org.fytyny.dirdrive.model.ApiKey.class).addAnnotatedClass(org.fytyny.dirdrive.model.Session.class)
-        .addAnnotatedClass(Directory.class);
+        configuration.addAnnotatedClass(org.fytyny.dirdrive.model.ApiKey.class)
+                .addAnnotatedClass(org.fytyny.dirdrive.model.Session.class)
+                .addAnnotatedClass(Directory.class);
         configuration.setProperty("hibernate.dialect",
                 "org.hibernate.dialect.H2Dialect");
         configuration.setProperty("hibernate.connection.driver_class",
@@ -73,7 +117,7 @@ public class SessionFactoryRule implements MethodRule {
         return session;
     }
 
-    public void injectManager(Repository repository){
+    private void injectManager(Repository repository){
         repository.setEntityManager(createSession().getEntityManagerFactory().createEntityManager());
     }
 }

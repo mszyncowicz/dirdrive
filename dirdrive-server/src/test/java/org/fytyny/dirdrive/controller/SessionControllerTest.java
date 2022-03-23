@@ -10,13 +10,15 @@ import org.fytyny.dirdrive.service.ResponseService;
 import org.fytyny.dirdrive.service.SessionService;
 import java.util.UUID;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Spy;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 import org.mockito.stubbing.Answer;
 
 import javax.transaction.*;
@@ -24,10 +26,10 @@ import javax.ws.rs.core.Response;
 import java.io.File;
 import java.util.Arrays;
 
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 public class SessionControllerTest {
 
     private final static String API_TOKEN = "Working api token";
@@ -45,7 +47,7 @@ public class SessionControllerTest {
     @Spy
     SessionController sessionController;
 
-    @Before
+    @BeforeEach
     public void before(){
         sessionController.sessionService =sessionService;
         sessionController.apiKeyService =apiKeyService;
@@ -70,17 +72,17 @@ public class SessionControllerTest {
     public void shouldReturnNewSession() throws HeuristicRollbackException, HeuristicMixedException, NotSupportedException, RollbackException, SystemException {
         Session generated = generateRandomSession(apiKeyService.getByToken(API_TOKEN));
         when(sessionService.createSession(any())).then( a -> {
-            Assert.assertTrue(a.getArguments()[0].equals(apiKeyService.getByToken(API_TOKEN)));
+            Assertions.assertTrue(a.getArguments()[0].equals(apiKeyService.getByToken(API_TOKEN)));
             return generated;
         });
         doAnswer( a ->{
-            Assert.assertEquals(generated,a.getArguments()[0]);
+            Assertions.assertEquals(generated,a.getArguments()[0]);
             return null;
         }).when(responseService).success(any());
 
         Response session = sessionController.createSession(API_TOKEN);
 
-        Assert.assertNull(session);
+        Assertions.assertNull(session);
         verify(sessionService).createSession(apiKeyService.getByToken(API_TOKEN));
         verify(apiKeyService,times(4)).getByToken(API_TOKEN);
         verify(responseService).success(generated);
@@ -90,14 +92,14 @@ public class SessionControllerTest {
     public void shouldReturnErrorWhenApiKeyWrong() throws HeuristicRollbackException, HeuristicMixedException, NotSupportedException, RollbackException, SystemException {
 
         doAnswer( a ->{
-            GeneralResponseDTO argumentAt = a.getArgumentAt(0, GeneralResponseDTO.class);
-            Assert.assertEquals(GeneralResponseDTO.authenticationFailed(),argumentAt);
+            GeneralResponseDTO argumentAt = a.getArgument(0, GeneralResponseDTO.class);
+            Assertions.assertEquals(GeneralResponseDTO.authenticationFailed(),argumentAt);
             return null;
         }).when(responseService).error(any(),eq(401));
 
         Response response = sessionController.createSession(API_TOKEN + "sgeg");
 
-        Assert.assertNull(response);
+        Assertions.assertNull(response);
         verify(sessionService,times(0)).createSession(apiKeyService.getByToken(API_TOKEN));
         verify(apiKeyService).getByToken(API_TOKEN);
         verify(responseService).error(any(),eq(401));

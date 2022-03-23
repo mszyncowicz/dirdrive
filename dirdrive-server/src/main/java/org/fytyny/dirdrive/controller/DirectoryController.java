@@ -167,7 +167,6 @@ public class DirectoryController {
         }
         if (directoryDTO == null || fileDTO == null){
             return responseService.error(GeneralResponseDTO.fileIsNull(), 400);
-
         }
         userTransaction.begin();
         ApiKey apiKeyBySession = apiKeyService.getApiKeyBySession(sessionToken);

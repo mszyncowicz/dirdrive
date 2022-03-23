@@ -2,29 +2,29 @@ package org.fytyny.dirdrive.repository;
 
 import org.fytyny.dirdrive.model.Directory;
 import org.fytyny.dirdrive.model.Session;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.UUID;
 
+@ExtendWith(SessionFactoryExtension.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class DirectoryRepositoryIT {
 
+    @InjectEntityMangaer
     DirectoryRepositoryImpl  directoryRepository;
-    @Rule
-    public SessionFactoryRule sessionFactoryRule = new SessionFactoryRule();
-    @Before
+
+    @BeforeAll
     public void init(){
         directoryRepository = new DirectoryRepositoryImpl();
-        sessionFactoryRule.injectManager(directoryRepository);
     }
 
     @Test
     public void saveTest(){
         Directory directory = generateRandomDir();
         Directory save = directoryRepository.save(directory);
-        Assert.assertEquals(directory,save);
+        Assertions.assertEquals(directory,save);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class DirectoryRepositoryIT {
         directoryRepository.entityManager.getTransaction().commit();
 
         Directory byLabel = directoryRepository.getByLabel(directory.getLabel());
-        Assert.assertEquals(directory,byLabel);
+        Assertions.assertEquals(directory,byLabel);
     }
 
     public static Directory generateRandomDir(){

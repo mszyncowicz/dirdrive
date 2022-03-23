@@ -5,21 +5,24 @@ import org.fytyny.dirdrive.model.ApiKey;
 import org.fytyny.dirdrive.model.Session;
 import org.fytyny.dirdrive.repository.SessionRepository;
 
-import java.util.Optional;
 import java.util.UUID;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Spy;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 
-import static org.mockito.Matchers.anyObject;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 public class SessionServiceTest {
 
     @Spy
@@ -28,7 +31,7 @@ public class SessionServiceTest {
     @Mock
     SessionRepository sessionRepository;
 
-    @Before
+    @BeforeEach
     public void init(){
         sessionService.setSessionRepository(sessionRepository);
     }
@@ -41,17 +44,17 @@ public class SessionServiceTest {
         apiKey.setId(UUID.randomUUID());
 
         SessionContainer sessionContainer = new SessionContainer();
-        when(sessionRepository.save(anyObject())).then(a ->{
-            Session argumentAt = a.getArgumentAt(0,Session.class);
-            Assert.assertEquals(argumentAt.getApiKey(),apiKey);
+        when(sessionRepository.save(any())).then(a ->{
+            Session argumentAt = a.getArgument(0,Session.class);
+            Assertions.assertEquals(argumentAt.getApiKey(),apiKey);
             sessionContainer.setSession(argumentAt);
             return argumentAt;
         });
 
         Session session = sessionService.createSession(apiKey);
 
-        Assert.assertNotNull(sessionContainer.getSession());
-        Assert.assertEquals(session,sessionContainer.getSession());
+        Assertions.assertNotNull(sessionContainer.getSession());
+        Assertions.assertEquals(session,sessionContainer.getSession());
 
     }
     @Data

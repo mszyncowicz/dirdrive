@@ -2,29 +2,26 @@ package org.fytyny.dirdrive.repository;
 
 import org.fytyny.dirdrive.model.ApiKey;
 import org.fytyny.dirdrive.model.Session;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.UUID;
 
+@ExtendWith(SessionFactoryExtension.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SessionRepositoryIT {
 
 
-    @Rule
-    public SessionFactoryRule sessionFactoryRule = new SessionFactoryRule();
-
+    @InjectEntityMangaer
     SessionRepositoryImpl sessionRepository;
 
+    @InjectEntityMangaer
     ApiKeyRepositoryImpl apiKeyRepository;
 
-    @Before
+    @BeforeAll
     public void init(){
         sessionRepository = new SessionRepositoryImpl();
         apiKeyRepository = new ApiKeyRepositoryImpl();
-        sessionFactoryRule.injectManager(sessionRepository);
-        sessionFactoryRule.injectManager(apiKeyRepository);
     }
 
     @Test
@@ -33,15 +30,19 @@ public class SessionRepositoryIT {
 
         Session save = sessionRepository.save(session);
 
-        Assert.assertEquals(session,save);
+        Assertions.assertEquals(session,save);
 
         Session byId = sessionRepository.getById(session.getId());
 
-        Assert.assertEquals(session,byId);
+        Assertions.assertEquals(session,byId);
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void saveWithNoApiKey(){
+        Assertions.assertThrows( Exception.class,() -> noApiKeySave());
+    }
+
+    private void noApiKeySave() {
         Session session = generateSession();
         session.setApiKey(null);
         sessionRepository.save(session);
@@ -56,7 +57,7 @@ public class SessionRepositoryIT {
         sessionRepository.entityManager.getTransaction().commit();
 
         Session byToken = sessionRepository.getByToken(session.getToken());
-        Assert.assertEquals(session,byToken);
+        Assertions.assertEquals(session,byToken);
     }
 
     public Session generateSession(){

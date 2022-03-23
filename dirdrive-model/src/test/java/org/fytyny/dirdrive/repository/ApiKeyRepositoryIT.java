@@ -2,31 +2,29 @@ package org.fytyny.dirdrive.repository;
 
 import org.fytyny.dirdrive.model.ApiKey;
 import org.fytyny.dirdrive.model.Session;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.LinkedList;
 import java.util.UUID;
 
+@ExtendWith(SessionFactoryExtension.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ApiKeyRepositoryIT {
 
-    @Rule
-    public SessionFactoryRule sessionFactoryRule = new SessionFactoryRule();
+    @InjectEntityMangaer
     ApiKeyRepositoryImpl apiKeyRepository;
 
-    @Before
+    @BeforeAll
     public void init(){
         apiKeyRepository = new ApiKeyRepositoryImpl();
-        sessionFactoryRule.injectManager(apiKeyRepository);
     }
 
     @Test
     public void saveTest(){
         ApiKey apiKey = generateRandomApiKey();
         apiKeyRepository.save(apiKey);
-        Assert.assertEquals(apiKey,apiKeyRepository.getById(apiKey.getId()));
+        Assertions.assertEquals(apiKey,apiKeyRepository.getById(apiKey.getId()));
     }
 
     @Test
@@ -37,8 +35,8 @@ public class ApiKeyRepositoryIT {
         apiKeyRepository.entityManager.getTransaction().commit();
 
         ApiKey byToken = apiKeyRepository.getByToken(apiKey.getToken());
-        Assert.assertNotNull(byToken);
-        Assert.assertEquals(apiKey,byToken);
+        Assertions.assertNotNull(byToken);
+        Assertions.assertEquals(apiKey,byToken);
     }
 
     private ApiKey generateRandomApiKey(){

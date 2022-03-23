@@ -1,8 +1,5 @@
 package org.fytyny.dirdrive.controller;
 
-
-import jdk.nashorn.internal.objects.annotations.Getter;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
